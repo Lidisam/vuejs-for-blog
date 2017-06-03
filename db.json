@@ -1,0 +1,110 @@
+{
+  "getNewsList": [
+    {
+      "id": 1,
+      "title": "新闻条目1新闻条目1新闻条目1新闻条目1",
+      "url": "http://starcraft.com"
+    },
+    {
+      "id": 2,
+      "title": "新闻条目2新闻条目2新闻条目2新闻条目2",
+      "url": "http://warcraft.com"
+    },
+    {
+      "id": 3,
+      "title": "新闻条3新闻条3新闻条3",
+      "url": "http://overwatch.com"
+    },
+    {
+      "id": 4,
+      "title": "新闻条4广告发布",
+      "url": "http://hearstone.com"
+    }
+  ],
+  "login": {
+    "username": "yudongdong",
+    "userId": 123123
+  },
+  "getPrice": {
+    "buyNumber": 1,
+    "buyType": 0,
+    "period": 0,
+    "version": "0"
+  },
+  "createOrder": {
+    "orderId": "6djk979"
+  },
+  "getOrderList": {
+    "query": "",
+    "productId": 0,
+    "startDate": "",
+    "endDate": ""
+  },
+  "getNewArchives": [
+    {
+      "name": "关于PHP程序员技术职业生涯规划",
+      "id": 1,
+      "index": "php-x"
+    },
+    {
+      "name": "PHP+Swoole的闭包写法",
+      "id": 2,
+      "hot": 1,
+      "index": "php-w"
+    },
+    {
+      "name": "基于swoole的task功能实现程序内的map-reduce",
+      "id": 4,
+      "index": "php-a"
+    },
+    {
+      "name": "PHP并发IO编程之路",
+      "id": 3,
+      "index": "php-s"
+    }
+  ],
+  "getArchiveType": [
+    {
+      "name": "C/C++",
+      "id": 1,
+      "index": "c"
+    },
+    {
+      "name": "Java",
+      "id": 2,
+      "index": "java"
+    },
+    {
+      "name": "PHP",
+      "id": 4,
+      "index": "php"
+    },
+    {
+      "name": "Javascript",
+      "id": 3,
+      "index": "javascript"
+    }
+  ],
+  "getArchiveDate": [
+    {
+      "id": 1,
+      "date": "2017-07",
+      "index": "201707"
+    },
+    {
+      "id": 5,
+      "date": "2017-05",
+      "index": "201705"
+    },
+    {
+      "id": 3,
+      "date": "2017-02",
+      "index": "201702"
+    },
+    {
+      "id": 4,
+      "date": "2016-12",
+      "index": "201612"
+    }
+  ]
+}
