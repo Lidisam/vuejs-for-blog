@@ -1,6 +1,6 @@
 <template>
-  <div class="container-fluid" style="padding-left: 0;padding-right: 0">
   <!--S=首页模板内容-->
+  <div class="container-fluid" style="padding-left: 0;padding-right: 0">
     <div class="col-md-12">
       <!--S=内容展示栏-->
       <div class="col-md-9 index-content">
@@ -19,13 +19,9 @@
           </div>
         </div>
         <!--S=分页-->
-        <div class="col-md-12 " style="margin-left: 0;padding-left: 0">
-          <ul class="pager">
-            <li class="next">
-              <a href="/page/2">下一页 &rarr;</a>
-            </li>
-          </ul>
-        </div>
+        <keep-alive>
+          <pagination url="/page/"></pagination>
+        </keep-alive>
         <!--E=分页-->
       </div>
       <!--E=内容展示栏-->
@@ -35,15 +31,17 @@
       </keep-alive>
       <!--E=侧边栏-->
     </div>
-    </div>
+  </div>
   <!--E=首页模板内容-->
 </template>
 
 <script>
   import SideBar from '../components/sidebar'
+  import Pagination from '../components/base/pagination'
   export default {
     components: {
-      SideBar
+      SideBar,
+      Pagination
     },
     created: function () {
       //获取初始文章信息
@@ -53,11 +51,19 @@
        }, (err) => {
         console.log(err);
       })
+      //分页获取文章
+      this.$http.get('/api/getPagination?num='+this.page)
+        .then((res) => {
+        this.Archives = res.data;
+      }, (err) => {
+        console.log(err);
+      })
     },
     data () {
       return {
         invTime: 2000,
-        Archives: []
+        Archives: [],
+        page:  this.$route.params.num
       }
     }
   }

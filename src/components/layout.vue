@@ -23,9 +23,11 @@
               <li>
                 <form class="navbar-form navbar-left" role="search" action="./search.html">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="输入文章名/作者名/内容信息">
+                    <input type="text" class="form-control" id="search-key" placeholder="输入文章名/作者名/内容信息"
+                    ><button type="submit" class="btn btn-default" id="search-btn">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>搜索
+                  </button>
                   </div>
-                  <button type="submit" class="btn btn-default">搜索</button>
                 </form>
               </li>
               <li @click="aboutClick" class="login" style="right: 0;position: absolute">
@@ -396,6 +398,16 @@ body{min-height:100%;margin:0;padding:0;position:relative;}
   padding-left: 15px;
 }
 
+#search-key {
+  border-left: none;border-top-right-radius: 0;-webkit-border-top-right-radius:0;-webkit-border-bottom-right-radius:0;
+  border-bottom-right-radius: 0;border-right: 0
+}
 
-
+#search-btn {
+  border-left: none;border-top-left-radius: 0;-webkit-border-top-left-radius:0;-webkit-border-bottom-left-radius:0;
+  border-bottom-left-radius: 0;margin-left: 0
+}
+.icon-bar {
+  background-color: #ffffff;
+}
 </style>

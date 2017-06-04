@@ -12,6 +12,8 @@ import OrderListPage from '@/pages/orderList'
 //blog组件
 import ArchivesPage from '@/pages/archives'
 import ArchivesCategoryPage from '@/pages/archivesCategorys'
+import IndexPaginationPage from '@/pages/indexPagination'
+import NotFoundPage from '@/pages/notFound'
 
 
 Vue.use(Router);
@@ -26,13 +28,23 @@ export default new Router({
     },
     {
       name: 'archives',
-      path: '/archives/:id',
+      path: '/archive/:id',
       component: ArchivesPage
     },
     {
       name: 'archivesCategory',
       path: '/archives/category/:id',
       component: ArchivesCategoryPage
+    },
+    {  //首页分页
+      name: 'indexPagination',
+      path: '/page/:num',
+      component: IndexPaginationPage
+    },
+    {  //404页面
+      name: 'NotFound',
+      path: '*',
+      component: NotFoundPage
     },
     {
       path: '/orderList',

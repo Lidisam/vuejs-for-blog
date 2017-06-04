@@ -1,6 +1,6 @@
 <template>
     <!--S=侧边栏-->
-    <div class="col-md-4 index-sidebar" >
+    <div class="col-md-3 index-sidebar" >
       <div class="index-left-block">
         <h2>近期文章</h2>
         <ul>
@@ -22,20 +22,30 @@
           </li>
         </ul>
       </div>
-      <div class="index-left-block lastest-news">
+      <div class="index-left-block">
         <h2>文章归档</h2>
         <ul>
           <li v-for="item in archiveDate">
-            <a :href="item.url" class="new-item">{{ item.date }}</a>
+            <router-link :to="{ name: 'archivesCategory', params: { id: item.id }}">
+              {{ (item.date.split("-"))[0] }} 年 {{ (item.date.split("-"))[1] }}月
+            </router-link>
           </li>
         </ul>
       </div>
-      <div class="index-left-block lastest-news">
+      <div class="index-left-block">
         <h2>功能</h2>
         <ul>
-          <li v-for="item in newsList">
-            <a :href="item.url" class="new-item">{{ item.title }}</a>
-          </li>
+          <li><a href="">RSS订阅</a></li>
+          <li><a href="">站点地图</a></li>
+          <li><a href="">联系我~~</a></li>
+        </ul>
+      </div>
+      <div class="index-left-block">
+        <h2>友链</h2>
+        <ul>
+          <li><a href="http://blog.csdn.net/qq_28666081">My csdn博客</a></li>
+          <li><a href="https://cn.vuejs.org/">Vuejs手册</a></li>
+          <li><a href="laravelacademy.org">Laravel学院</a></li>
         </ul>
       </div>
     </div>

@@ -3,7 +3,7 @@
   <div class="container-fluid" style="padding-left: 0;padding-right: 0">
     <div class="col-md-12">
       <!--S=内容展示栏-->
-      <div class="col-md-8 index-content">
+      <div class="col-md-9 index-content">
         <div class="index-board-list col-md-12">
           <div
             class="index-board-item col-md-12"
@@ -18,10 +18,24 @@
             </div>
           </div>
         </div>
+        <!--S=分页-->
+        <div class="col-md-12 " style="margin-left: 0;padding-left: 0">
+          <ul class="pager">
+            <li class="previous">
+              <a href="#">&larr; 上一页</a>
+            </li>
+            <li class="next">
+              <a href="#">下一页 &rarr;</a>
+            </li>
+          </ul>
+        </div>
+        <!--E=分页-->
       </div>
       <!--E=内容展示栏-->
       <!--S=侧边栏-->
-      <side-bar></side-bar>
+      <keep-alive>
+        <side-bar></side-bar>
+      </keep-alive>
       <!--E=侧边栏-->
     </div>
   </div>
