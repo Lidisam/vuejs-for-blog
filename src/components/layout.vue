@@ -48,7 +48,8 @@
     <div class="app-foot">
       <p>版权所有 © 2017 (Lisam)的博客</p>
     </div>
-    <my-dialog :is-show="isShowAboutDialog" @on-close="closeDialog('isShowAboutDialog')">
+    <my-dialog :is-show="isShowAboutDialog" :size="{width: '96%',left: '2%',top: '10%','max-height': '80%'}"
+               @on-close="closeDialog('isShowAboutDialog')">
       <p>
         <br/>
       </p>
@@ -222,7 +223,6 @@ export default {
       this[attr] = false
     },
     onSuccessLog (data) {
-      console.log(data)
       this.closeDialog ('isShowLogDialog')
       this.username = data.username
     }
@@ -297,6 +297,9 @@ body {
   font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
   font-size: 14px;
   color: #444;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
 }
 .app-head {
   background: #363636;
@@ -307,7 +310,8 @@ body {
 }
 
 .app-content {
-  padding-bottom:100px
+  padding-bottom:100px;
+  flex: 1;
 }
 .app-head-inner {
   /*width: 1200px;*/
@@ -337,6 +341,7 @@ body {
 html{height:100%;margin-bottom: 0;padding-bottom: 0}
 body{min-height:100%;margin:0;padding:0;position:relative;}
 .app-foot {
+  /*采用了flex布局即可去掉这个https://xxxgitone.github.io/2017/05/27/FlexBox弹性布局基本用法 */
   position:absolute;bottom:0;width:100%;
   height:20px;
   background-color: #f0f2f5;

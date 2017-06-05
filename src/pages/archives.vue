@@ -2,13 +2,13 @@
   <!--S=首页模板内容-->
   <div class="container-fluid" style="padding-left: 0;padding-right: 0">
     <div class="col-md-12">
-      <!--S=内容展示栏-->
       <div class="col-md-9 index-content">
+        <!--S=内容展示栏-->
         <div class="index-board-list col-md-12" id="content">
           <h4 style="margin: 0 0 0 0;padding: 0 0 0 0;font-weight:bolder;">{{ archive.title }}</h4>
           <div class="parting-line">&nbsp;</div>
           <div class="archive-author"><span><span class="glyphicon glyphicon-calendar">
-          </span>{{ archive.created_at.split("-")[0]+"年"+archive.created_at.split("-")[1]+"月"+archive.created_at.split("-")[2]+"日" }}
+          </span>{{ created_date }}
           </span>&nbsp;<span><i class="icon-bar"></i>
             <span class="glyphicon glyphicon-user"></span>{{ archive.author }}</span>
           </div>
@@ -47,11 +47,13 @@
             <!--E=其他文章-->
           </div>
         </div>
-        <div class="archive-comment">
-          <div id="SOHUCS" sid="lidisam" ></div>
-        </div>
+        <!--E=内容展示栏-->
+        <!--S=评论-->
+        <keep-alive>
+          <comment></comment>
+        </keep-alive>
+        <!--E=评论-->
       </div>
-      <!--E=内容展示栏-->
       <!--S=侧边栏-->
       <keep-alive>
         <side-bar></side-bar>
@@ -65,10 +67,12 @@
 <script>
   import SideBar from '../components/sidebar'
   import ShareBtn from '../components/base/shareBtn'
+  import Comment from '../components/comment'
   export default {
     components: {
       SideBar,
-      ShareBtn
+      ShareBtn,
+      Comment
     },
     created: function () {
       this.$http.get('/api/getArchive')
@@ -82,10 +86,17 @@
     },
     data () {
       return {
-        invTime: 2000,
         archive: {},
         pArchive:{},
         nArchive:{}
+      }
+    },
+    computed: {
+      //处理创建文章的时间格式
+      created_date () {
+        return (this.archive.created_at).split("-")[0]+"年"
+          +(this.archive.created_at).split("-")[1]+"月"
+          +(this.archive.created_at).split("-")[2]+"日";
       }
     },
     methods: {
@@ -98,14 +109,8 @@
         window.location.href = '/archive/'+this.nArchive.id
       }
     }
-  };
+  }
 
-  (function(){
-    var appid = 'cyt2SxO6B';
-    var conf = 'prod_56a9ca3b6fa8cae4b12819244519c921';
-    var width = window.innerWidth || document.documentElement.clientWidth;
-    if (width < 960) {
-      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
 </script>
 
 <style scoped>
@@ -127,10 +132,6 @@
     color: #555555;
     font-family: Verdana,"BitStream vera Sans",Tahoma,Helvetica,Sans-serif,serif;
     text-decoration: none;
-  }
-
-  .index-left-block .hr {
-    margin-bottom: 20px;
   }
 
   .index-left-block h2 {
@@ -169,7 +170,8 @@
   }
 
   .parting-line {
-    border: none;border-bottom: 1px solid #eeeeee;height: 1px
+    border: none;border-bottom: 1px solid #eeeeee;height: 1px;
+    clear: both;
   }
 .archive-tag,.archive-change a {
   color: #2970A6;

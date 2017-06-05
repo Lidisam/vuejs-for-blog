@@ -3,7 +3,7 @@
     <div class="dialog-wrap">
       <div class="dialog-cover"  v-if="isShow" @click="closeMyself"></div>
       <transition name="drop">
-        <div class="dialog-content"  v-if="isShow">
+        <div class="dialog-content"  v-if="isShow" :style="[size]">
           <p class="dialog-close" @click="closeMyself">x</p>
           <slot>empty</slot>
         </div>
@@ -18,6 +18,9 @@
       isShow: {
         type: Boolean,
         default: false
+      },
+      size: {        //最好用百分比
+        required: false
       }
     },
     data () {
@@ -63,18 +66,18 @@
     height: 100%;
   }
   .dialog-content {
-    width: 50%;
     position: fixed;
-    max-height: 50%;
     overflow: auto;
     background: #fff;
-    top: 20%;
-    left: 50%;
-    margin-left: -25%;
     z-index: 10;
-    border: 2px solid #464068;
+    border: 2px solid #ffffff;
     padding: 2%;
     line-height: 1.6;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+    max-height: 50%;
+    box-shadow: 1px 1px 1px #fff;
   }
   .dialog-close {
     position: absolute;

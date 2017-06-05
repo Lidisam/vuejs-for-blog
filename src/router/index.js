@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import IndexPage from '@/pages/index'
 import VueResource from 'vue-resource'
+import VueHtml5Editor from 'vue-html5-editor'
+
 import DetailPage from '@/pages/detail'
 import DetailAnaPage from '@/pages/detail/analysis'
 import DetailCouPage from '@/pages/detail/count'
@@ -18,6 +20,7 @@ import NotFoundPage from '@/pages/notFound'
 
 Vue.use(Router);
 Vue.use(VueResource);
+Vue.use(VueHtml5Editor,{language: "zh-cn",hiddenModules: ["info","list","image","font"]});
 
 export default new Router({
   mode: 'history',

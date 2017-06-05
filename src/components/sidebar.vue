@@ -158,4 +158,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  ul li a {
+    text-decoration: none;
+  }
 </style>

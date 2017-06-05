@@ -39,4 +39,7 @@
 </script>
 
 <style scoped>
+  .next, .previous {
+    cursor: pointer;
+  }
 </style>

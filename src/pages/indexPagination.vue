@@ -10,10 +10,13 @@
             v-for="(item, index) in Archives"
             :class="['index-board-' + item.id]">
             <div class="index-board-item-inner">
-              <h2>{{ item.title }}</h2>
-              <p>{{ item.description }}</p>
+              <h2>
+                <span class="write-type" :style="getColor(item.type)">{{ getTypeName(item.type) }}</span>
+                <a :href="'/archive/'+item.id">{{ item.title }}</a>
+              </h2>
+              <p class="article-content">{{ item.description }}</p>
               <div class="index-board-button">
-                <router-link class="button" :to="{path: 'detail/' + item.toKey}">点击查看</router-link>
+                <router-link class="button pull-right"  :to="{ name: 'archives', params: { id: item.id }}">点击查看</router-link>
               </div>
             </div>
           </div>
@@ -64,6 +67,14 @@
         invTime: 2000,
         Archives: [],
         page:  this.$route.params.num
+      }
+    },
+    methods: {
+      getColor (type) {
+        return 'background-color: #'+(type == 0?'67B73C':(type == 1?'337AB3':'A9491C'))
+      },
+      getTypeName (type) {
+        return (type == 0?'原':(type == 1?'转':'译'))
       }
     }
   }
@@ -120,39 +131,28 @@
   .index-board-item {
     background: #fff;
     box-shadow: 0 0 1px #ddd;
-    padding: 20px;
+    padding: 20px 20px 5px;
     margin-right: 20px;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
   }
 
- .index-board-item:hover {
-   transform: scale(1.02);
-   -ms-transform: scale(1.02);
-   -webkit-transform: scale(1.02);
-   -moz-transform: scale(1.02);
- }
+  .index-board-item:hover {
+    transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+  }
 
   .index-board-item-inner {
     min-height: 125px;
-    padding-left: 120px;
+    /*padding-left: 120px;*/
+  }
+  .index-board-item-inner h2 a{
+    color: #000;
+    text-decoration: none;
   }
 
-  .index-board-car .index-board-item-inner {
-    background: url(../assets/images/1.png) no-repeat;
-  }
-
-  .index-board-loud .index-board-item-inner {
-    background: url(../assets/images/2.png) no-repeat;
-  }
-
-  .index-board-earth .index-board-item-inner {
-    background: url(../assets/images/3.png) no-repeat;
-  }
-
-  .index-board-hill .index-board-item-inner {
-    background: url(../assets/images/4.png) no-repeat;
-  }
 
   .index-board-item h2 {
     font-size: 18px;
@@ -165,5 +165,17 @@
   .index-board-button {
     margin-top: 20px;
   }
+  .index-board-button a {
+    text-decoration: none;
+  }
 
+  .write-type {
+    margin-right: 10px;background-color: #67B73C;color: white;font-size: 14px;padding: 2px 2px 1px 2px
+  }
+
+  .article-content {
+    font-size: 12px;
+    color: #888;
+    font-family: 'Microsoft YaHei',serif;
+  }
 </style>
