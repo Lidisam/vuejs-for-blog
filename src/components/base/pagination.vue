@@ -28,11 +28,14 @@
     methods: {
       prevPage () {
         this.page = parseInt(this.page) - 1;
-        window.location.href = this.url+this.page
+        this.$emit('on-change', this.page);
+//        window.location.href = this.url+this.page
       },
       nextPage () {
+//        alert(this.page)
         this.page = parseInt(this.page) + 1;
-        window.location.href = this.url+this.page
+        this.$emit('on-change', this.page);
+//        window.location.href = this.url+this.page
       }
     }
   }

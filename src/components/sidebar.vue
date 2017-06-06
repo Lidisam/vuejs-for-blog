@@ -16,7 +16,7 @@
         <h2>分类目录</h2>
         <ul>
           <li v-for="item in archiveType">
-            <router-link :to="{ name: 'archivesCategory', params: { id: item.id }}">
+            <router-link :to="{ name: 'archivesCategory', params: { keyword: item.index }}">
               {{ item.name }}
             </router-link>
           </li>
@@ -26,7 +26,7 @@
         <h2>文章归档</h2>
         <ul>
           <li v-for="item in archiveDate">
-            <router-link :to="{ name: 'archivesCategory', params: { id: item.id }}">
+            <router-link :to="{ name: 'archivesDate', params: { year: (item.date.split('-'))[0],month: (item.date.split('-'))[1]}}">
               {{ (item.date.split("-"))[0] }} 年 {{ (item.date.split("-"))[1] }}月
             </router-link>
           </li>
@@ -35,9 +35,9 @@
       <div class="index-left-block">
         <h2>功能</h2>
         <ul>
-          <li><a href="">RSS订阅</a></li>
-          <li><a href="">站点地图</a></li>
-          <li><a href="">联系我~~</a></li>
+          <li><a :href="'/feed'">RSS订阅</a></li>
+          <li><a :href="'/siteMap'">站点地图</a></li>
+          <li><a :href="'/contact'">联系我~~</a></li>
         </ul>
       </div>
       <div class="index-left-block">

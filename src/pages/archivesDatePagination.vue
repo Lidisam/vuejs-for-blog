@@ -1,11 +1,10 @@
 <template>
-  <archives-show :Archives="Archives" :url="'/page/'" isPagination="1" @on-pagination="getArchivesList($event)">
+  <archives-show :Archives="Archives" :url="'/archives/date/'+year+'/'+month+'/page/'" isPagination="1" @on-pagination="getArchivesList($event)">
     <div slot="archives-type-desc">
       <!--暂无-->
     </div>
   </archives-show>
 </template>
-
 <script>
   import ArchivesShow from '../components/archivesShow'
   export default {
@@ -18,6 +17,8 @@
     data () {
       return {
         Archives: [],
+        year:  this.$route.params.year,
+        month:  this.$route.params.month,
         page: this.$route.params.num
       }
     },
@@ -27,8 +28,7 @@
           page = this.page;
           this.page = 0;
         }
-        //h5中无刷新修改
-        this.$router.push({ name: 'indexPagination', params: { num: page }});
+        this.$router.push({ name: 'archivesDatePagPage', params: {year:this.year, month:this.month, num: page }}); //h5中无刷新修改
         this.$http.get('/api/getPagination?num='+page)
           .then((res) => {
           this.Archives = res.data;

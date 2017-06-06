@@ -1,11 +1,10 @@
 <template>
-  <archives-show :Archives="Archives" :url="'/page/'" isPagination="0">
+  <archives-show :Archives="Archives" :url="'/archives/date/'+year+'/'+month+'/page/'" isPagination="0">
     <div slot="archives-type-desc">
       <!--暂无-->
     </div>
   </archives-show>
 </template>
-
 <script>
   import ArchivesShow from '../components/archivesShow'
   export default {
@@ -17,13 +16,15 @@
       this.$http.get('/api/getArchives')
         .then((res) => {
         this.Archives = res.data;
-       }, (err) => {
+    }, (err) => {
         console.log(err);
       })
     },
     data () {
       return {
-        Archives: []
+        Archives: [],
+        year:  this.$route.params.year,
+        month:  this.$route.params.month
       }
     }
   }

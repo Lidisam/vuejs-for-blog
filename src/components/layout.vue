@@ -17,14 +17,13 @@
           </div>
           <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="/detail">详情</a></li>
+              <li><a href="/detail">归档日志</a></li>
               <li><a href="#"><i class="icon-coffee"></i>聊天室</a></li>
-              <li><a href="/orderList">订单列表</a></li>
               <li>
-                <form class="navbar-form navbar-left" role="search" action="./search.html">
+                <form class="navbar-form navbar-left" role="search" action="/">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="search-key" placeholder="输入文章名/作者名/内容信息"
-                    ><button type="submit" class="btn btn-default" id="search-btn">
+                    <input type="text" name="keyword" class="form-control" id="search-key"
+                           placeholder="输入文章名/作者名/内容信息"><button type="submit" class="btn btn-default" id="search-btn">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>搜索
                   </button>
                   </div>
@@ -180,51 +179,34 @@
         <br/>
       </p>
     </my-dialog>
+    <!--S=回到顶部按钮-->
+    <keep-alive>
+      <back-top></back-top>
+    </keep-alive>
+    <!--E=回到顶部按钮-->
 
-    <!--<my-dialog :is-show="isShowLogDialog" @on-close="closeDialog('isShowLogDialog')">-->
-      <!--<log-form @has-log="onSuccessLog"></log-form>-->
-    <!--</my-dialog>-->
-
-    <!--<my-dialog :is-show="isShowRegDialog" @on-close="closeDialog('isShowRegDialog')">-->
-      <!--<reg-form></reg-form>-->
-    <!--</my-dialog>-->
   </div>
 </template>
 
 <script>
 import Dialog from '../components/base/dialog'
-import LogForm from '../components/logForm'
-import RegForm from '../components/regForm'
+import BackTop from '../components/base/backTop'
 export default {
   components: {
     MyDialog: Dialog,
-    LogForm,
-    RegForm
+    BackTop
   },
   data () {
     return {
-      isShowAboutDialog: false,
-      isShowLogDialog: false,
-      isShowRegDialog: false,
-      username: ''
+      isShowAboutDialog: false
     }
   },
   methods: {
     aboutClick () {
       this.isShowAboutDialog = true
     },
-    logClick () {
-      this.isShowLogDialog = true
-    },
-    regClick () {
-      this.isShowRegDialog = true
-    },
     closeDialog (attr) {
       this[attr] = false
-    },
-    onSuccessLog (data) {
-      this.closeDialog ('isShowLogDialog')
-      this.username = data.username
     }
   }
 }
@@ -257,6 +239,7 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
