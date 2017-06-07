@@ -1,4 +1,4 @@
-# vue-wechat
+# vue-blog
   vuejs制作的一个博客系统，并使用了json-server返回数据。
 
 
@@ -16,7 +16,7 @@ npm run build
 
 ```
 
-  
+
 ### 参考
 
   [Vue-组件](http://www.jianshu.com/p/011d308d7dd7)

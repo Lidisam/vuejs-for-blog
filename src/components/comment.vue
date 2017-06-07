@@ -36,7 +36,7 @@
       <!--S=评论内容列表-->
       <div class="archive-comment-part2-list" v-for="(item, index) in comments">
         <div class="col-md-12 archive-comment-part2-list-author" :id="'quote'+item.id">
-          <a :href="item.url?item.url:'javascript:void(0)'">{{ item.name }}</a>&nbsp;说：
+          <a :href="item.url?item.url:'javascript:void(0)'" title="点击跳到该用户个人博客/微博...">{{ item.name }}</a>&nbsp;说：
           <span class="pull-right">
             {{(item.created_at).split("-")[0]+"年"+(item.created_at).split("-")[1]+"月"+(item.created_at).split("-")[2]+"日"}}
           </span>
