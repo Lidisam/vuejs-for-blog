@@ -4,14 +4,7 @@ import IndexPage from '@/pages/index'
 import VueResource from 'vue-resource'
 import VueHtml5Editor from 'vue-html5-editor'
 
-import DetailPage from '@/pages/detail'
-import DetailAnaPage from '@/pages/detail/analysis'
-import DetailCouPage from '@/pages/detail/count'
-import DetailForPage from '@/pages/detail/forecast'
-import DetailPubPage from '@/pages/detail/publish'
-import OrderListPage from '@/pages/orderList'
-
-//blog组件
+//blog基础页面
 import ArchivesPage from '@/pages/archives'
 import ArchivesCategoryPage from '@/pages/archivesCategorys'
 import IndexPaginationPage from '@/pages/indexPagination'
@@ -20,7 +13,7 @@ import ArchivesDatePage from '@/pages/archivesDate'
 import ArchivesDatePagPage from '@/pages/archivesDatePagination'
 import NotFoundPage from '@/pages/notFound'
 import ContactPage from '@/pages/contactMe'
-
+import DatePage from '@/pages/date'
 
 Vue.use(Router);
 Vue.use(VueResource);
@@ -76,37 +69,15 @@ export default new Router({
       path: '/contact',
       component: ContactPage
     },
+    {  //日期归档日志
+      name: 'datePage',
+      path: '/date',
+      component: DatePage
+    },
     {  //404页面
       name: 'NotFound',
       path: '*',
       component: NotFoundPage
-    },
-    {
-      path: '/orderList',
-      component: OrderListPage
-    },
-    {
-      path: '/detail',
-      component: DetailPage,
-      redirect: '/detail/analysis',
-      children: [
-        {
-          path: 'analysis',
-          component: DetailAnaPage
-        },
-        {
-          path: 'count',
-          component: DetailCouPage
-        },
-        {
-          path: 'forecast',
-          component: DetailForPage
-        },
-        {
-          path: 'publish',
-          component: DetailPubPage
-        }
-      ]
     }
   ]
 })

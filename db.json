@@ -53,7 +53,7 @@
       "index": "php-w"
     },
     {
-      "name": "基于swoole的task功能实现程序内的map-reduce",
+      "name": "基于swoole的task功能实现程序",
       "id": 4,
       "index": "php-a"
     },
@@ -252,5 +252,83 @@
       "created_at": "2017-07-14",
       "p_id": 0
     }
-  ]
+  ],
+  "getAllDates": {
+    "2017": [
+      {
+        "date": "2017-12",
+        "date_url": "2017/12",
+        "latest_archive": "直播技术总结（六）如何快速起播直播流",
+        "archive_id": 24
+      },
+      {
+        "date": "2017-11",
+        "date_url": "2017/11",
+        "latest_archive": "直播技术总结（五）如何快速起播直播流",
+        "archive_id": 15
+      },
+      {
+        "date": "2017-10",
+        "date_url": "2017/10",
+        "latest_archive": "直播技术总结（四）如何快速起播直播流",
+        "archive_id": 14
+      },
+      {
+        "date": "2017-07",
+        "date_url": "2017/07",
+        "latest_archive": "直播技术总结（三）如何快速起播直播流",
+        "archive_id": 12
+      },
+      {
+        "date": "2017-06",
+        "date_url": "2017/06",
+        "latest_archive": "直播技术总结（二）如何快速起播直播流",
+        "archive_id": 8
+      },
+      {
+        "date": "2017-05",
+        "date_url": "2017/05",
+        "latest_archive": "直播技术总结（一）如何快速起播直播流",
+        "archive_id": 7
+      },
+      {
+        "date": "2017-03",
+        "date_url": "2017/10",
+        "latest_archive": "直播技术总结（零）如何快速起播直播流",
+        "archive_id": 6
+      }
+    ],
+    "2016": [
+      {
+        "date": "2016-11",
+        "date_url": "2016/11",
+        "latest_archive": "直播技术总结（六）如何快速起播直播流",
+        "archive_id": 5
+      },
+      {
+        "date": "2016-10",
+        "date_url": "2016/10",
+        "latest_archive": "直播技术总结（四）如何快速起播直播流",
+        "archive_id": 4
+      },
+      {
+        "date": "2016-06",
+        "date_url": "2016/06",
+        "latest_archive": "直播技术总结（二）如何快速起播直播流",
+        "archive_id": 3
+      },
+      {
+        "date": "2016-03",
+        "date_url": "2016/03",
+        "latest_archive": "直播技术总结（一）如何快速起播直播流",
+        "archive_id": 2
+      },
+      {
+        "date": "2016-01",
+        "date_url": "2016/01",
+        "latest_archive": "直播技术总结（零）如何快速起播直播流",
+        "archive_id": 1
+      }
+    ]
+  }
 }

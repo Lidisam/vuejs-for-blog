@@ -17,7 +17,8 @@
           </div>
           <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="/detail">归档日志</a></li>
+              <li><a href="/">首页</a></li>
+              <li><a href="/date">归档日志</a></li>
               <li><a href="#"><i class="icon-coffee"></i>聊天室</a></li>
               <li>
                 <form class="navbar-form navbar-left" role="search" action="/">
@@ -49,135 +50,9 @@
     </div>
     <my-dialog :is-show="isShowAboutDialog" :size="{width: '96%',left: '2%',top: '10%','max-height': '80%'}"
                @on-close="closeDialog('isShowAboutDialog')">
-      <p>
-        <br/>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14pxfont-family:宋体">李迪山</span>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">求职目标：</span>PHP<span style="font-family:宋体">开发工程师</span></span>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">求职地点：广东省广州市</span>/<span style="font-family:宋体">深圳市</span></span>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14px">&nbsp;</span>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">个人信息：</span>22<span style="font-family:宋体">岁</span></span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px">15089271488</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <a href="http://undefined"><span style="text-decoration:underline;"><span style="font-family: 宋体;color: rgb(0, 0, 255)">364362035@qq.com</span></span></a>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <a href="http://undefined"><span style="text-decoration:underline;"><span style="font-family: 宋体;color: rgb(0, 0, 255)">https://github.com/Lidisam</span></span></a>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <a href="http://undefined"><span style="text-decoration:underline;"><span style="font-family: 宋体;color: rgb(0, 0, 255)">http://blog.csdn.net/qq_28666081</span></span></a>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px">&nbsp;</span>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14pxfont-family:宋体">在校社团：</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px">2015.09-2016.07</span> <span style=";font-family:宋体;font-size:14px">iHat<span style="font-family:宋体">工作室</span></span> <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">工作室负责人及</span>Web<span style="font-family:宋体">组组长</span></span>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14px">&nbsp;</span>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14pxfont-family:宋体">教育背景：</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">在学时间</span>: 2014.09 - 2018.06</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14pxfont-family:宋体">学校：五邑大学</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14pxfont-family:宋体">专业：软件工程</span>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14pxfont-family:宋体">获奖荣耀：</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">【</span>2015 <span style="font-family:宋体">年】五邑大学校园软件设计大赛优胜奖</span></span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">【</span>2015 <span style="font-family:宋体">年】五邑大学信息商业技能大赛二等奖</span></span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">【</span>2015 <span style="font-family:宋体">年】广东省智慧校园软件设计大赛三等奖 &nbsp;</span></span>
-      </p>
-      <p>
-        <span style=";font-family:宋体;font-size:14pxfont-family:宋体">校内项目：</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">2016-05 </span><span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">-</span><span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">&nbsp;2016-07</span><span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">&nbsp;</span><span style=";font-family:宋体;font-size:14pxfont-family:宋体">四海通商城</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14pxfont-family:宋体">【项目简介】以四海通水行用户为基础的微信商城，包含日用品、订水、生鲜等。</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">【主要负责】基于</span>ThinkPHP<span style="font-family:宋体">、</span><span style="font-family:Calibri">Bootstrap</span><span style="font-family:宋体">开发微信前后客户端，适配移动端。</span></span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px">&nbsp;</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">2016-01 </span><span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">-</span><span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">&nbsp;2016-03</span><span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">&nbsp;</span><span style=";font-family:宋体;font-size:14pxfont-family:宋体">即教宝</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">【项目简介】基于</span>Android<span style="font-family:宋体">和</span><span style="font-family:Calibri">IOS</span><span style="font-family:宋体">的家教信息发布平台，允许多组织多角色管理成员及信息。</span></span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">【主要负责】数据库及</span>app<span style="font-family:宋体">接口设计，家教信息后台管理开发。</span></span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px">&nbsp;</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">2016-09 </span><span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">-</span><span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">&nbsp;2016-11</span><span style="font-family: 宋体;color: rgb(102, 102, 102);letter-spacing: 0;font-size: 12px">&nbsp;</span><span style=";font-family:宋体;font-size:14pxfont-family:宋体">萌宠圈</span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">【项目简介】一款物联网设备</span>-<span style="font-family:宋体">宠物圈，通过</span><span style="font-family:Calibri">Socket</span><span style="font-family:宋体">实现对宠物圈的远程监控与控制，并及时同步到云服务器，实时反馈到客户端。</span></span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px"><span style="font-family:宋体">【主要负责】数据库及爱宠圈</span>app<span style="font-family:宋体">接口设计，</span><span style="font-family:Calibri">socket</span><span style="font-family:宋体">连接控制宠物圈传输信息接口的设计。</span></span>
-      </p>
-      <p style="margin-left:28px;text-indent:28px">
-        <span style=";font-family:宋体;font-size:14px">&nbsp;</span>
-      </p>
-      <p>
-        <span style="font-family: 宋体;letter-spacing: 0;font-size: 12pxfont-family:宋体">个人技能：</span>
-      </p>
-      <p style="text-indent:28px">
-        <span style=";font-family:宋体;font-size:14pxfont-family:宋体">主修课程：操作系统、数据结构、计算机网络、数据库原理、软件工程等。</span>
-      </p>
-      <p style="text-indent:28px">
-        <span style="font-family: 宋体;letter-spacing: 0;font-size: 12pxfont-family:宋体">专业技能：</span>
-      </p>
-      <p style="text-indent:28px">
-        <span style="font-family: 宋体;letter-spacing: 0;font-size: 12px">(1) <span style="font-family:宋体">能够熟练使用</span><span style="font-family:Arial">PHP</span><span style="font-family:宋体">编程，对</span><span style="font-family:Arial">OOP</span><span style="font-family:宋体">编程及设计模式有较好的掌握，对</span><span style="font-family:Arial">JavaScript</span><span style="font-family:宋体">、</span><span style="font-family:Arial">C</span><span style="font-family:宋体">语言较为熟悉，对于</span><span style="font-family:Arial">Laravel</span><span style="font-family:宋体">、</span><span style="font-family:Arial">ThinkPHP</span><span style="font-family:宋体">、</span><span style="font-family:Arial">Swoole</span><span style="font-family:宋体">等主流框架及</span><span style="font-family:Arial">WordPress</span><span style="font-family:宋体">、微信公众号的开发等有一定的了解和开发经验，熟悉</span><span style="font-family:Arial">LNMP</span><span style="font-family:宋体">部署及</span><span style="font-family:Arial">MySQL</span><span style="font-family:宋体">优化，熟悉</span><span style="font-family:Arial">Redis</span><span style="font-family:宋体">和</span><span style="font-family:Arial">Memcached</span><span style="font-family:宋体">。</span></span>
-      </p>
-      <p style="text-indent:28px">
-        <span style="font-family: 宋体;letter-spacing: 0;font-size: 12px">&nbsp;</span>
-      </p>
-      <p style=";text-align:justify;text-justify:inter-ideograph">
-        <span style="font-family: 宋体;letter-spacing: 0;font-size: 12pxfont-family:宋体">自我评价：</span>
-      </p>
-      <p style="text-indent:28px;text-align:justify;text-justify:inter-ideograph">
-        <span style="font-family: 宋体;letter-spacing: 0;font-size: 12px"><span style="font-family:宋体">热爱技术，喜欢尝试新事物，如</span>nodejs<span style="font-family:宋体">、</span><span style="font-family:Arial">vuejs</span><span style="font-family:宋体">等，善于与他人沟通、合作，大学时期曾当过工作室的负责人，带领或参与过多个团队项目，有出色的合作团队意识。</span></span>
-      </p>
-      <p>
-        <br/>
-      </p>
+      <div class="container-fluid">
+        详情在此填写您的个人信息
+      </div>
     </my-dialog>
     <!--S=回到顶部按钮-->
     <keep-alive>
@@ -195,6 +70,9 @@ export default {
   components: {
     MyDialog: Dialog,
     BackTop
+  },
+  created: function () {
+    document.title = "Lisam网络日志"
   },
   data () {
     return {
@@ -388,12 +266,12 @@ body{min-height:100%;margin:0;padding:0;position:relative;}
 
 #search-key {
   border-left: none;border-top-right-radius: 0;-webkit-border-top-right-radius:0;-webkit-border-bottom-right-radius:0;
-  border-bottom-right-radius: 0;border-right: 0
+  border-bottom-right-radius: 0;border-right: 0;
 }
 
 #search-btn {
   border-left: none;border-top-left-radius: 0;-webkit-border-top-left-radius:0;-webkit-border-bottom-left-radius:0;
-  border-bottom-left-radius: 0;margin-left: 0
+  border-bottom-left-radius: 0;margin-left: 0;padding-top: 7px;
 }
 .icon-bar {
   background-color: #ffffff;
