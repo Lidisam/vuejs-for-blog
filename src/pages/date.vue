@@ -12,7 +12,7 @@
                   <div v-for="(item2, index) in item"
                   ><a :href="'/archives/date/'+item2.date_url" class="month pull-left"
                   >-&nbsp;{{ item2.date.split("-")[0]+"-"+item2.date.split("-")[1] }}</a>|<a
-                    class="month-latest-archive" :href="'/archive/'+item2.archive_id">{{ item2.latest_archive }}</a></div>
+                    class="month-latest-archive" :href="'/archive/'+item2.archive_id">本月最新：{{ item2.latest_archive }}</a></div>
                 </pre>
               </div>
             </li>

@@ -5,7 +5,7 @@
     <div class="col-md-12">
       <!--S=内容展示栏-->
       <div class="col-md-9 index-content">
-        <!--插槽①：显示获取的信息类型描述-->
+        <!--挂载点①：显示获取的信息类型描述-->
         <slot name="archives-type-desc"></slot>
         <div class="index-board-list col-md-12">
           <div
@@ -71,6 +71,12 @@
       }
     },
     created: function () {
+      //判断手机端隐藏相关信息
+      window.onload = function() {  //手机时隐藏
+        if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+          $(".index-board-button").hide();
+        }
+      };
     },
     data () {
       return {
